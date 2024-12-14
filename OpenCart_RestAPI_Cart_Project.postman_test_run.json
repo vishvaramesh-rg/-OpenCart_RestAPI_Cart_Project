@@ -1,0 +1,189 @@
+{
+	"id": "d475ee99-2f44-423b-b04e-332897fd43b9",
+	"name": "OpenCart_RestAPI_Cart_Project",
+	"timestamp": "2024-12-14T16:46:46.327Z",
+	"collection_id": "40210067-7ab10a82-8c16-4e09-a51b-37b3e97f09a4",
+	"folder_id": 0,
+	"environment_id": "40210067-f970bb0e-b66f-4775-8543-160195592906",
+	"totalPass": 7,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-12-14T16:46:45.258Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "2cc68df4-ea83-49a5-9b5c-0704b2a1b9fd",
+			"name": "Create Token",
+			"url": "http://192.168.125.231/opencart/upload/index.php?route=api/login",
+			"time": 53,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"api token generate check": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"api token generate check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				53
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"api token generate check": true
+				}
+			]
+		},
+		{
+			"id": "a4ad82c7-db28-43cd-a231-d038f9958835",
+			"name": "Add to cart",
+			"url": "http://192.168.125.231/opencart/upload/index.php?route=api/cart/add?api_token=AUTH_VALUE",
+			"time": 70,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				70
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"success message": true
+				}
+			]
+		},
+		{
+			"id": "c9cb8151-670f-4d0c-98bf-9f3de518a2ca",
+			"name": "Get added product",
+			"url": "http://192.168.125.231/opencart/upload/index.php?route=api/cart/products?api_token=AUTH_VALUE",
+			"time": 79,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				79
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "46c021cc-a8fc-49f1-9afa-e5dd4a5687fe",
+			"name": "Edit the cart",
+			"url": "http://192.168.125.231/opencart/upload/index.php?route=api/cart/edit?api_token=AUTH_VALUE",
+			"time": 57,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				57
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "318c5824-715e-41d6-ae6d-154e33cfa5d0",
+			"name": "Remove the products from cart",
+			"url": "http://192.168.125.231/opencart/upload/index.php?route=api/cart/remove?api_token=AUTH_VALUE",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 304,
+	"collection": {
+		"requests": [
+			{
+				"id": "2cc68df4-ea83-49a5-9b5c-0704b2a1b9fd",
+				"method": "POST"
+			},
+			{
+				"id": "a4ad82c7-db28-43cd-a231-d038f9958835",
+				"method": "POST"
+			},
+			{
+				"id": "c9cb8151-670f-4d0c-98bf-9f3de518a2ca",
+				"method": "GET"
+			},
+			{
+				"id": "46c021cc-a8fc-49f1-9afa-e5dd4a5687fe",
+				"method": "POST"
+			},
+			{
+				"id": "318c5824-715e-41d6-ae6d-154e33cfa5d0",
+				"method": "POST"
+			}
+		]
+	}
+}
